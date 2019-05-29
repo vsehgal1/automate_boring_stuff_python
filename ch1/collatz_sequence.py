@@ -11,7 +11,16 @@ def collatz (number):
 
 # main function calls collatz to generate sequence 
 if __name__ == "__main__":
-    user_val = int(input("Enter integer: "))
-    final_val = collatz (user_val)
-    while (final_val != 1):
-        final_val = collatz (final_val)
+    try:
+        user_val = int(raw_input("Enter Integer: "))
+        final_val = collatz (user_val)
+        while (final_val != 1):
+            final_val = collatz (final_val)
+
+    except ValueError:
+        print("WRONG TYPE")
+
+                
+ 
+    
+    
